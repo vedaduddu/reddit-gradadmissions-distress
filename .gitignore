@@ -1,0 +1,24 @@
+# Research data and generated artifacts stay on approved local/server storage.
+Data/
+outputs/
+Archive/
+Paper PDF Versions/
+
+# Python environments and caches.
+.venv/
+venv/
+venvs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local configuration, credentials, and logs.
+.env
+.env.*
+*.log
+
+# Operating-system and editor files.
+.DS_Store
+.idea/
+.vscode/
