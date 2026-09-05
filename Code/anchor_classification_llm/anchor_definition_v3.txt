@@ -1,0 +1,198 @@
+You are classifying original Reddit posts from graduate-admissions communities.
+
+Choose exactly one final label:
+
+- anchor
+- non_anchor
+
+PURPOSE
+
+Identify graduate-education discourse that communicates a realized adverse
+outcome, meaningful distress, threatening comparison, or a concrete and
+material risk involving admission, affordability, attendance, completion,
+immigration, or expected career outcomes.
+
+The construct includes personal disclosures, collective or vicarious threats,
+and negative information environments. Personal self-disclosure and clinical
+language are not required. Classify only what is observable in the post; do not
+infer a diagnosis or an effect on a reader.
+
+BINARY DECISION RULE
+
+Classify a post as anchor only when both conditions are satisfied:
+
+1. GRADUATE-EDUCATION RELEVANCE
+
+The post concerns applying to, choosing, financing, attending, completing, or
+obtaining the expected outcome from a graduate or professional degree.
+
+2. MANIFESTED NEGATIVE SIGNAL OR MATERIAL THREAT
+
+The post provides direct textual evidence of at least one of the following:
+
+A. a realized adverse admissions, educational, financial, immigration, or
+   career outcome;
+B. meaningful anxiety, fear, hopelessness, discouragement, emotional strain,
+   or feeling overwhelmed;
+C. a sustained or emphatic belief that rejection or failure is likely;
+D. an unfavorable or threatening comparison that portrays the author or a
+   recognizable group as substantially disadvantaged;
+E. a concrete and material risk to application viability, affordability,
+   attendance, completion, immigration status, or an expected degree outcome;
+F. seriously giving up, withdrawing, declining, or abandoning graduate
+   education because the path is untenable.
+
+The negative signal must be substantive in context. It may be expressed in one
+clear clause and does not have to dominate the entire post, but a bare mention,
+routine tradeoff, isolated negative word, or merely conceivable bad outcome is
+not sufficient.
+
+CORE DISTINCTION: THREAT IS NOT ORDINARY UNCERTAINTY
+
+Graduate applications inherently involve uncertainty. Do not treat uncertainty
+as consequential merely because a decision could affect admission.
+
+The following are non_anchor unless the post independently supplies evidence
+for one of categories A-F above:
+
+- asking whether a profile is competitive or what the author's chances are;
+- asking whether a GPA, test score, credential, course, recommendation, essay,
+  work history, or demographic characteristic is sufficient;
+- describing a GPA, score, institution, credential, or experience as low,
+  weak, nontraditional, or imperfect;
+- asking which school, program, test, recommender, document, deadline, essay
+  choice, or application strategy is preferable;
+- asking whether an ordinary application choice could help or hurt;
+- requesting a profile review, school list, or admissions prediction;
+- uncertainty following positive or routine application information;
+- listing ordinary advantages, disadvantages, costs, or tradeoffs.
+
+Words such as "worried," "concerned," "chance," "competitive," "low,"
+"weak," "risk," "rejected," "worth," "afford," and "bad" are evidence to
+interpret in context, not automatic triggers.
+
+PROFILE AND APPLICATION-CHANCE BOUNDARY
+
+A profile weakness qualifies only when the author meaningfully frames it as
+probable failure, disqualification, hopelessness, or a source of substantial
+distress. A routine "is this enough?", "what are my chances?", "is this a
+reach?", or "will this look bad?" question is non_anchor by default.
+
+Do not infer insecurity solely from requesting evaluation or reassurance. The
+post must manifest insecurity beyond the ordinary desire to improve an
+application.
+
+PROCEDURAL-RISK BOUNDARY
+
+A procedural post qualifies when a concrete existing problem credibly
+jeopardizes eligibility, timely submission, review, enrollment, attendance, or
+immigration—for example, a missing required document near a deadline, an
+application actually withdrawn because of a visa delay, or an unresolved error
+that may prevent processing.
+
+A procedural post is non_anchor when it merely asks for the optimal strategy,
+how a normal process works, whether one option is preferred, or whether a
+hypothetical choice might affect admission. "Could this hurt my chances?" is
+not sufficient without material jeopardy, meaningful distress, or likely
+failure.
+
+A hypothetical mention of rejection is not automatically anchor. Distinguish a
+neutral possibility from a post that centrally solicits, reports, or interprets
+realized rejection outcomes.
+
+FUNDING, AFFORDABILITY, AND ROI THREAT
+
+Classify as anchor when concrete stakes include unaffordable tuition,
+substantial debt, loss of funding, inability to attend without funding,
+significant opportunity cost, family or employment obligations, or credible
+fear that the degree will not produce its intended career benefit.
+
+A request for tuition, scholarship, salary, placement, or financing facts is
+non_anchor without material personal stakes or a clearly adverse outlook.
+Merely comparing prices or asking whether a program is "worth it" is not
+automatically anchor.
+
+CAREER OR DEGREE-OUTCOME THREAT
+
+Classify as anchor when graduate education is connected to poor recruiting,
+unemployment, career stagnation or insecurity, failed career transition,
+degree regret, or credible concern that attending a program could cause harm
+rather than advancement.
+
+Career content qualifies only when the adverse condition is substantively
+connected to applying to, attending, financing, completing, or expecting an
+outcome from graduate education. Neutral career-goal and placement questions
+are non_anchor.
+
+COLLECTIVE, SOCIAL-COMPARISON, AND VICARIOUS THREAT
+
+The negative signal may concern another applicant, a group, or a broader
+condition. Classify as anchor when the post reports realized adverse outcomes
+or credibly worsening conditions for a recognizable group—for example,
+widespread rejection, funding loss, visa restrictions, reduced hiring, or a
+weak job market that threatens the value or feasibility of graduate education.
+
+Do not classify a post as anchor merely because a reader could compare
+themselves with the author or conceivably become worried. The threatening
+comparison or group-level adverse condition must be present in the post.
+
+LIFE BURDEN AND WITHDRAWAL
+
+Meaningful conflict with caregiving, employment, health, relocation,
+immigration, or other major obligations may qualify when it threatens the
+ability to attend or complete the degree. Ordinary scheduling questions do not.
+
+Neutral selection of one school or opportunity over another is not withdrawal.
+Withdrawal qualifies when an application, enrollment, or degree path is being
+abandoned because it has become untenable or an adverse event has prevented it.
+
+SCOPE BOUNDARY
+
+Negative emotion about an interpersonal situation within graduate school is
+not sufficient unless it is connected to applying, attending, completing, or
+obtaining an expected educational or career outcome.
+
+Posts unrelated to graduate education are non_anchor even when they contain
+negative language. Technical phrases such as "stress testing," positive uses
+of emotional words, and negative language appearing only in quoted or copied
+material do not qualify unless the author adopts the concern.
+
+EVIDENCE EXTRACTION
+
+Before assigning the label, copy the shortest exact phrases that support the
+decision into evidence_phrases. Every phrase must appear verbatim in the target
+post; do not invent, paraphrase, or correct evidence.
+
+For an anchor prediction, the evidence must establish at least one of A-F. Do
+not use a bare weakness, ordinary question, or isolated keyword as sufficient
+evidence.
+
+Copy exact phrases supporting an ordinary or neutral interpretation into
+counterevidence_phrases. Use an empty list when no relevant phrase exists.
+
+DECISION CHECK
+
+Before choosing anchor, ask:
+
+1. What exact phrase establishes realized adversity, meaningful negative
+   affect, likely failure, threatening comparison, concrete material risk, or
+   withdrawal?
+2. Does that phrase show more than the ordinary uncertainty inherent in an
+   application or educational choice?
+3. Is the harm connected to graduate education rather than merely conceivable?
+
+If question 1 or 2 cannot be answered with direct textual evidence, choose
+non_anchor.
+
+FINAL RULE
+
+Choose anchor when graduate education is connected to a manifested negative
+signal or concrete material threat under A-F.
+
+Choose non_anchor when the post is primarily neutral, factual, procedural,
+strategic, profile-oriented, or informational and supplies no independent
+evidence under A-F.
+
+Complete the required structured checklist, record exact evidence and
+counterevidence, briefly explain the decision, and assign exactly one final
+label: anchor or non_anchor.
