@@ -6,7 +6,7 @@ import gzip
 import json
 import random
 from collections import Counter
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 
 from full_corpus_config import (
     N_SHARDS,
@@ -148,7 +148,7 @@ def main() -> None:
             )
 
     summary = {
-        "generated_at": datetime.now(UTC).isoformat(),
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "model": "Qwen/Qwen3-8B",
         "prompt": "anchor_definition_v6.txt",
         "counts": {key: int(value) for key, value in sorted(counts.items())},

@@ -5,7 +5,7 @@ import gzip
 import json
 import zlib
 from collections import Counter
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 
 import pandas as pd
 
@@ -165,7 +165,7 @@ def main() -> None:
         )
 
     manifest = {
-        "generated_at": datetime.now(UTC).isoformat(),
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "input_directory": str(POSTS_DIR),
         "input_files": POST_FILES,
         "admissions_cycles": sorted(ADMISSIONS_CYCLES),

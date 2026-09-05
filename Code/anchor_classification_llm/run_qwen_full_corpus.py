@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse
 import gzip
 import json
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 
 import pandas as pd
 
@@ -196,7 +196,7 @@ def main() -> None:
                         "shard": args.shard,
                         "error_type": type(error).__name__,
                         "error": str(error),
-                        "recorded_at": datetime.now(UTC).isoformat(),
+                        "recorded_at": datetime.now(timezone.utc).isoformat(),
                     },
                 )
                 print(
